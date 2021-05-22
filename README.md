@@ -1,2 +1,1 @@
-# kipu
-Official website of Kipu Osteopatia.
+# KIPU OSTEOPATIA
