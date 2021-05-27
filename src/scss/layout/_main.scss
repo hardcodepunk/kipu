@@ -131,6 +131,17 @@
   }
 }
 
+.what {
+  .flex-container {
+    justify-content: flex-end;
+  }
+}
+
+.footer {
+  padding: 60px 0 200px;
+  background: $purple--light;
+}
+
 /*
  * styling
  */
@@ -172,6 +183,31 @@
   }
 }
 
-.highlight {
+.textblock {
+  margin-bottom: 70px;
+  &__content {
+    width: 100%;
+    max-width: 600px;
+    p {
+      margin-bottom: 24px;
+    }
+  }
+  h3 {
+    margin-bottom: 20px;
+  }
+}
+
+.highlight--title {
   color: $purple--light;
+}
+
+.highlight--paragraph {
+  font-family: din-condensed, sans-serif;
+  font-size: 22px;
+  text-transform: uppercase;
+  color: $purple--light;
+}
+
+.highlight--dark {
+  color: $purple--dark;
 }
