@@ -37,11 +37,6 @@ for (var i = 0; i < navItem.length; i++) {
   })
 };
 
-/* scroll when clicking the introduction arrow
-document.getElementById('js-start-scrolling').onclick = function() {
-  document.getElementById('services').scrollIntoView({behavior: "smooth"});
-};*/
-
 // keeptrack
 document.addEventListener("DOMContentLoaded", function() {
   var header = document.getElementById('header');
