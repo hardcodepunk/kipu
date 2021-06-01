@@ -11,7 +11,7 @@
 }
 
 .wrapper {
-  padding: 0 4%;
+  padding: 0 5%;
   max-width: 1450px;
   width: 100%;
   position: relative;
@@ -45,6 +45,30 @@
   padding: 0;
 }
 
+// responsive
+.open-menu {
+  overflow: hidden;
+}
+
+.open-menu .header {
+  .nav__toggle {
+    .top {
+      transform: rotate(-45deg);
+    }
+    .middle {
+      opacity: 0;
+    }
+    .bottom {
+      transform: rotate(45deg);
+    }
+  }
+  .nav {
+    visibility: visible;
+    opacity: 1;
+    transition: visibility 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955), opacity 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  }
+}
+
 /*
  * components
  */
@@ -57,18 +81,47 @@
   height: 85px;
   width: 100%;
   padding: 0 60px;
+  z-index: 9000;
   .nav {
     .list {
       &__item {
         margin-right: 30px;
         letter-spacing: -0.4px;
         color: $purple--light;
-        transition: all 0.4s ease-out;
+        transition: color 0.4s ease-out;
         cursor: pointer;
         &:hover, &.is-active {
           color: $purple--dark;
         }
       }
+    }
+  }
+  .nav__toggle {
+    position: absolute;
+    left: 30px;
+    top: 42px;
+    width: 30px;
+    height: 30px;
+    display: none;
+    z-index: 9001;
+    cursor: pointer;
+    .top, .middle, .bottom {
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      width: 100%;
+      height: 4px;
+      margin: -2px 0 0;
+      background: $purple--light;
+      transform-origin: 50%;
+      transition: all 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    }
+    .top {
+      transform: translate(0, -10px);
+    }
+    .bottom {
+      transform: translate(0, 10px);
     }
   }
 }
@@ -83,12 +136,14 @@
     padding: 300px 5% 0;
     &__title {
       margin-bottom: 40px;
+      color: $purple--light;
       &__comma {
         font-size: 48px;
       }
       &__sub-title {
         font-size: 35px;
-        color: $purple--light;
+        margin-top: -5px;
+        color: $purple--dark;
       }
     }
   }
@@ -122,6 +177,7 @@
 
 .who {
   &__illustration {
+    width: 500px;
     right: 100px;
   }
 }
@@ -173,6 +229,15 @@
     margin: 0;
     line-height: 24px;
   }
+  .row {
+      display: flex;
+      justify-content: space-between;
+  }
+}
+
+#map {
+  height: 400px;
+  width: 550px;;
 }
 
 /*
@@ -352,10 +417,11 @@
   font-size: 24px;
   margin-bottom: 70px;
   &__item {
-    padding-right: 90px;
+    margin-right: 70px;
     padding-left: 40px;
     position: relative;
     display: flex;
+    white-space: nowrap;
   }
   &__time {
     &:before {
@@ -407,6 +473,8 @@
   font-size: 22px;
   text-transform: uppercase;
   color: $purple--light;
+  line-height: 25px;
+  vertical-align: middle;
 }
 
 .highlight--dark {
