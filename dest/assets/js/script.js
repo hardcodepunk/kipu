@@ -2,8 +2,8 @@ var navItem = document.querySelectorAll('.js-nav-item');
 var body = document.getElementById('body');
 
 //initiate leaflet map
-var mymap = L.map('map').setView([41.38674517083558, 2.161157001826284], 13);
-var marker = L.marker([41.38674517083558, 2.161157001826284]).addTo(mymap);
+var mymap = L.map('map').setView([41.3870736, 2.1611151], 13);
+var marker = L.marker([41.3870736, 2.1611151]).addTo(mymap);
 
 L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoiaGFyZGNvZGVwdW5rIiwiYSI6ImNrcDg2ZXJkNzAzOHMycHQ3dWdtZmpvMWUifQ.aAsOVWi9LmL3adsY7k4MjA', {
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
