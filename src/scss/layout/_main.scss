@@ -208,6 +208,10 @@
       font-size: 24px;
       color: $gray;
     }
+    &__note {
+      display: flex;
+      margin-bottom: 40px;
+    }
   }
   &__hours__title {
     font-size: 53px;
@@ -228,6 +232,15 @@
     align-items: center;
     margin: 0;
     line-height: 24px;
+    &__note {
+      display: flex;
+      flex-direction: column;
+      &__sub {
+        font-size: 12px;
+        margin: 12px 0;
+        font-family: futura-pt;
+      }
+    }
   }
   .row {
       display: flex;
@@ -433,6 +446,7 @@
       color: $gray;
     }
   }
+
 }
 
 .meta {
