@@ -36,7 +36,7 @@
     "event-stream": "^3.3.5",
     "lodash": "^4.17.15",
     "lodash.mergewith": "^4.6.2",
-    "node-sass": "^8.0.0",
+    "node-sass": "^9.0.0",
     "postcss": "^8.3.0",
     "sass": "^1.56.1",
     "sshpk": "^1.16.1",
