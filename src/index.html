@@ -75,6 +75,7 @@
     <b class="bottom"></b>
   </span>
 </header>
+
 <section class="splash">
   <div class="wrapper">
     <div class="splash__content">
@@ -82,7 +83,25 @@
         Kipu<span class="splash__content__title__comma">,</span><br>
         <span class="splash__content__title__sub-title">el tacto que te nutre.</span>
       </h1>
-      <a href="https://wa.link/lbs8yi" class="cta">Reservar</a>
+      <!-- <button id="openCalendarButton" class="cta">Reservar</button> -->
+      <!-- Start Google Calendar widget -->
+      <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
+      <script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
+      <script>
+      (function() {
+        var target = document.currentScript;
+        window.addEventListener('load', function() {
+          calendar.schedulingButton.load({
+            url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ0jd_vXDjQN-NSb7uDbX3tVr3ILi6VrjHh0pJKSn00W3TlyTvkkhJH2edljqNa01hv4vFs7Jfd2?gv=true',
+            color: '#c0aee8',
+            label: 'Reservar',
+            class: 'cta',
+            target,
+          });
+        });
+      })();
+      </script>
+      <!-- End Google Calendar widget -->
     </div>
   </div>
 </section>

@@ -42,3 +42,18 @@ document.addEventListener("DOMContentLoaded", function() {
   var header = document.getElementById('header');
   var waypointInit = new KeepTrack(header);
 });
+
+// google calendar widget
+document.addEventListener("DOMContentLoaded", function () {
+  const openButton = document.getElementById("openCalendarButton");
+  const popupOverlay = document.getElementById("popupOverlay");
+  const closeButton = document.getElementById("closeButton");
+
+  openButton.addEventListener("click", function () {
+    popupOverlay.style.display = "flex";
+  });
+
+  closeButton.addEventListener("click", function () {
+    popupOverlay.style.display = "none";
+  });
+});
